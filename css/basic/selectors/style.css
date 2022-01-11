@@ -1,0 +1,92 @@
+/* RED     #FF4949
+YELLOW  #FFC82C
+BLUE    #0066FF */
+
+/* Type */
+h1 {
+  color: #06f;
+}
+
+strong {
+  color: #ffc82c;
+}
+
+/* Class */
+.red {
+  color: #ff4949;
+}
+
+.blue {
+  color: #06f;
+}
+
+.red.blue {
+  color: #ffc82c;
+}
+
+/* ID */
+#kimbug {
+  font-style: italic;
+}
+
+
+
+/* Descendant (자손) */
+section h2 {
+  color: #ff4949;
+}
+
+/* Child (자식) */
+section > h2 {
+  color: green;
+  font-size: 40px;
+}
+
+/* Sibling (형제) */
+/* active 클래스를 가진 항목 뒤에 있는 모든 형제들을 선택 */
+.active ~ li {
+  color: purple;
+}
+
+/* active 클래스를 가진 항목 바로 뒤에 있는 형제 하나를 선택 */
+.active + li {
+  color: aqua;
+}
+
+
+
+/* 구조적 가상 클래스 */
+ol > li:first-child {
+  color: #06f;
+}
+
+ol > li:last-child {
+  color: #ffc82c;
+}
+
+ol > li:nth-child(3) {
+  color: #ff4949;
+}
+
+/* 짝수 자식에만 적용. 근데 이런식으로 거의 안 씀 */
+ol > li:nth-child(2n) {
+  color: green;
+}
+
+
+/* 동적 가상 클래스 */
+a:hover {
+  color:orange;
+}
+
+a:active {
+  background-color: purple;
+}
+
+input {
+  outline: none;
+}
+
+input:focus {
+  border-color: #06f;
+}
